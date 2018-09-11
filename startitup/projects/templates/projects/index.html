@@ -2,7 +2,7 @@
 {% if all_albums %}
 	<ul>
 		{% for album in all_albums %}
-		<li><a href="/projects/{{album.id}}">Album Title here {{album.artist}}</a></li>
+		<li><a href={% url 'projects:detail' album.id%}>Album Title here {{album.artist}}</a></li>
 		{% endfor %}
 	</ul>
 {% else %}
